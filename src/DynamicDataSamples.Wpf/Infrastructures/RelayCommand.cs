@@ -19,7 +19,6 @@ public sealed class RelayCommand : ICommand
     public void ChangeCanExecute() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 }
 
-#if false
 public sealed class RelayCommand<T> : ICommand
 {
     private readonly Action<T?> _action;
@@ -36,4 +35,3 @@ public sealed class RelayCommand<T> : ICommand
 
     public void ChangeCanExecute() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 }
-#endif

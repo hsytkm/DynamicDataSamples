@@ -12,11 +12,14 @@
     mc:Ignorable="d">
 
     <TabControl TabStripPlacement="Left">
-        <TabItem Header="SourceList1">
-            <pages:SourceList1Page />
+        <TabItem Header="SourceCache2">
+            <pages:SourceCache2Page />
         </TabItem>
         <TabItem Header="SourceCache1">
             <pages:SourceCache1Page />
+        </TabItem>
+        <TabItem Header="SourceList1">
+            <pages:SourceList1Page />
         </TabItem>
     </TabControl>
 </Window>

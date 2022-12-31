@@ -16,7 +16,8 @@ public sealed class MyModel : BindableBase, IDisposable
         IObservable<int> timer = Observable.Timer(TimeSpan.Zero, TimeSpan.FromSeconds(1))
             .Select(x => (int)Math.Min(x, int.MaxValue));
 
-        IObservable<IChangeSet<int>> timerChangeSet = timer.ToObservableChangeSet(expireAfter: x => TimeSpan.FromMinutes(1));
+        // 指定秒が経過したら要素を削除することでコレクションのサイズを制限します
+        IObservable<IChangeSet<int>> timerChangeSet = timer.ToObservableChangeSet(expireAfter: x => TimeSpan.FromSeconds(20));
         TimerValueList = new SourceList<int>(timerChangeSet).AddTo(_disposables);
 
         RandomValueCache = new SourceCache<IdRandomValuePair, int>(x => x.Id).AddTo(_disposables);
