@@ -27,14 +27,15 @@ public sealed class SourceList1PageViewModel : BindableBase, IDisposable
     {
         var model = App.Current.Model;
 
-        model.TimerSourceList.Connect()
+        model.TimerValueList.Connect()
             .ObserveOnUIDispatcher()
             .Bind(out ReadOnlyObservableCollection<int>? items1)
             .Subscribe().AddTo(_disposables);
 
         ObservableCollectionExtended<int> items2 = new();
-        model.TimerSourceList.Connect()
+        model.TimerValueList.Connect()
             .Filter(x => x != 0 && (x % 2) == 0)    // multiple of 2
+            .Sort(SortExpressionComparer<int>.Descending(x => x))
             .ObserveOnUIDispatcher()
             .Bind(items2)
             .Subscribe().AddTo(_disposables);

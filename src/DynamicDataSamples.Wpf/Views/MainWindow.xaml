@@ -11,7 +11,12 @@
     Height="300"
     mc:Ignorable="d">
 
-    <Grid>
-        <pages:SourceList1Page />
-    </Grid>
+    <TabControl TabStripPlacement="Left">
+        <TabItem Header="SourceList1">
+            <pages:SourceList1Page />
+        </TabItem>
+        <TabItem Header="SourceCache1">
+            <pages:SourceCache1Page />
+        </TabItem>
+    </TabControl>
 </Window>

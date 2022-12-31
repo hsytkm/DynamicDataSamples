@@ -153,7 +153,7 @@ IObservable<IChangeSet<TObject, TKey>> myCacheObservable = myCache.Connect();
 - Aggregation (`Count`, `Max`, `Min`, `StdDev`, `Avg`)
 - Logical Operators (`And`, `Or`, `Xor`, `Except`)
 - `DisposeMany`
-- `DistinctValues`
+- `DistinctValues` (ソースから指定プロパティを選択します)
 - Virtualisation (`Virtualise`, `Page`)   ★理解していません。
 
 以下は実装例です。
