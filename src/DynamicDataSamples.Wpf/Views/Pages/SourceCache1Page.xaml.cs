@@ -4,11 +4,10 @@ using DynamicDataSamples.Wpf.Models;
 using System.Collections.ObjectModel;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
-using System.Windows.Controls;
 
 namespace DynamicDataSamples.Wpf.Views.Pages;
 
-public partial class SourceCache1Page : UserControl
+public partial class SourceCache1Page : MyPageControlBase
 {
     public SourceCache1Page()
     {

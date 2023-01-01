@@ -5,21 +5,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:DynamicDataSamples.Wpf.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pages="clr-namespace:DynamicDataSamples.Wpf.Views.Pages"
     Title="DynamicDataSamples"
-    Width="500"
-    Height="300"
+    Width="900"
+    Height="600"
     mc:Ignorable="d">
-
-    <TabControl TabStripPlacement="Left">
-        <TabItem Header="SourceCache2">
-            <pages:SourceCache2Page />
-        </TabItem>
-        <TabItem Header="SourceCache1">
-            <pages:SourceCache1Page />
-        </TabItem>
-        <TabItem Header="SourceList1">
-            <pages:SourceList1Page />
-        </TabItem>
-    </TabControl>
+    <local:PagesListBoxPage />
 </Window>

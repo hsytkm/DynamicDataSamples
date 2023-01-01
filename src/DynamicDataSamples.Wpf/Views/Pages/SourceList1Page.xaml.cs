@@ -3,11 +3,10 @@ using DynamicData.Binding;
 using System.Collections.ObjectModel;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
-using System.Windows.Controls;
 
 namespace DynamicDataSamples.Wpf.Views.Pages;
 
-public partial class SourceList1Page : UserControl
+public partial class SourceList1Page : MyPageControlBase
 {
     public SourceList1Page()
     {
